@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1474400014369" name="com.esqr.chat.provider" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.esqr.chat.provider"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="0.0.0.201609201933"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="7fb92f8b0b203594a51b6ae10870e57f519ba36bdb74a192808b7f67431c0ac9"/>
+      <attribute name="url" value="generated/com.esqr.chat.provider.jar"/>
+      <attribute name="size" type="Long" value="10613"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.esqr.chat.provider"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201609201933"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.esqr.chat.provider"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201609201933"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.esqr.chat.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.esqr.chat.provider"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201609201933"/>
+      <directive name="uses" value="org.osgi.dto"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.esqr.chat.api.Chat"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.esqr.chat.provider.Command"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.esqr.chat.api.Chat"/>
+      <attribute name="service.exported.interfaces" value="*"/>
+      <attribute name="user.name" value="osgi"/>
+      <directive name="uses" value="com.esqr.chat.api"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.esqr.chat.provider.Command"/>
+      <attribute name="osgi.command.function" type="List&lt;String&gt;" value="chat,members,send"/>
+      <attribute name="osgi.command.scope" value="chat"/>
+      <directive name="uses" value="com.esqr.chat.provider"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/misja/Documents/workspace/java/osgi"/>
+      <attribute name="project.path" value="/com.esqr.chat.provider"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.esqr.chat.api)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.dto)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.esqr.chat.api.Chat)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.esqr.chat.api.Chat)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+</repository>

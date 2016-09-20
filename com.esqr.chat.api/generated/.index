@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1474352680897" name="com.esqr.chat.api" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.esqr.chat.api"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201609200624"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="b9d76f76ee3c4a128f2f26b4e061885a08afdebcd8701dadce7952de593ce293"/>
+      <attribute name="url" value="generated/com.esqr.chat.api.jar"/>
+      <attribute name="size" type="Long" value="3768"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.esqr.chat.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201609200624"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.esqr.chat.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201609200624"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.esqr.chat.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.esqr.chat.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201609200624"/>
+      <directive name="uses" value="org.osgi.dto"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/misja/Documents/workspace/java/osgi"/>
+      <attribute name="project.path" value="/com.esqr.chat.api"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.dto)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>
